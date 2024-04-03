@@ -12,10 +12,90 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
+
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      /* Ajustez la hauteur de la bannière selon vos besoins */
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      /* Les images s'adapteront automatiquement à la hauteur de la bannière */
+      display: block;
+      /* Pour s'assurer que l'image prend toute la largeur */
+      margin: 0 auto;
+      /* Pour centrer l'image horizontalement */
+    }
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
   </style>
 </head>
 
 <body>
+
+
+  <div class="banner">
+    <img src="img/banniere1.jpg" alt="Bannière 1">
+    <img src="img/banniere2.jpg" alt="Bannière 2">
+    <img src="img/banniere3.jpg" alt="Bannière 3">
+    <div class="prev" onclick="prevSlide()">&#10094;</div>
+    <div class="next" onclick="nextSlide()">&#10095;</div>
+  </div>
+
+
+  <script>
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.banner img');
+
+    function showSlide() {
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        slides[currentSlide].style.display = 'block';
+    }
+
+    function prevSlide() {
+        currentSlide--;
+        if (currentSlide < 0) {
+            currentSlide = slides.length - 1;
+        }
+        showSlide();
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+        showSlide();
+    }
+
+    showSlide();
+</script>
 
   <div class="container mt-5">
     <div class="row">
