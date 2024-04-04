@@ -6,14 +6,13 @@
   <title>Détails de la Pizza</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      background-color: red;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-
-
+  body {
+    background-image: url('img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
     .banner {
       position: relative;
       width: 100%;
@@ -26,11 +25,8 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      /* Les images s'adapteront automatiquement à la hauteur de la bannière */
       display: block;
-      /* Pour s'assurer que l'image prend toute la largeur */
       margin: 0 auto;
-      /* Pour centrer l'image horizontalement */
     }
 
     .prev,
@@ -96,28 +92,6 @@
 
     showSlide();
 </script>
-
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="card">
-          <img src="img/pizza_image.jpeg" class="card-img-top" alt="Image de la pizza">
-          <div class="card-body">
-            <h5 class="card-title">Pizza Margherita</h5>
-            <p class="card-text">Une délicieuse pizza avec de la sauce tomate, du basilic frais et de la mozzarella.</p>
-            <p class="card-text">Prix : 10€</p>
-            <p class="card-text">Ingrédients :</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Sauce tomate</li>
-              <li class="list-group-item">Mozzarella</li>
-              <li class="list-group-item">Basilic frais</li>
-            </ul>
-            <a href="#" class="btn btn-primary mt-3">Ajouter au panier</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
